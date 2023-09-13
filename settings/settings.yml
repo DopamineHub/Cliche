@@ -1,0 +1,5 @@
+# basic services ----------------------------------------
+- entries:
+    - interface: services.interfaces.loggers.ILogger
+
+  class: services.implements.loggers_builtin.Logger
