@@ -36,7 +36,7 @@ SECRET_KEY = 'django-insecure-b&tun9)kj=gb(eb+zgh4*8zf!=cxb0&b*de7a=@^600_h++690
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -49,22 +49,31 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'corsheaders',
-    'django_cas_ng',
+    # 'django_cas_ng',
     'django_cleanup',
     'django_filters',
     'drf_yasg',
     'rest_framework',
+
+    'apps.cliche_apps',
+    'apps.cliche_builders',
+    'apps.cliche_models',
+    'apps.cliche_schemas',
+    'apps.cliche_scripts',
+    # 'apps.cliche_tests',
+    'apps.cliche_views',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'djangorestframework_camel_case.middleware.CamelCaseMiddleWare',
+    # 'djangorestframework_camel_case.middleware.CamelCaseMiddleWare',
 ]
 
 ROOT_URLCONF = 'launchers.urls'
@@ -93,6 +102,7 @@ WSGI_APPLICATION = 'launchers.wsgi.application'
 
 DATABASES = {
     'default': {
+        'ATOMIC_REQUESTS': True,
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
@@ -137,32 +147,37 @@ STATIC_ROOT = BASE_DIR / '.static'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / '.media'
 FILE_UPLOAD_PERMISSIONS = 0o644
+FIXTURE_DIRS = [BASE_DIR / 'fixtures']
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# CORS
+CORS_ALLOW_ALL_ORIGINS = True
+
 # rest framework
 REST_FRAMEWORK = {
     'COERCE_DECIMAL_TO_STRING': False,
     'EXCEPTION_HANDLER': 'utils.exceptions.exception_handler',
-    'DEFAULT_RENDERER_CLASSES': (
-        'djangorestframework_camel_case.render.CamelCaseJSONRenderer',
-        'djangorestframework_camel_case.render.CamelCaseBrowsableAPIRenderer',
-    ),
-    'DEFAULT_PARSER_CLASSES': (
-        # If you use MultiPartFormParser or FormParser, we also have a camel case version
-        'djangorestframework_camel_case.parser.CamelCaseFormParser',
-        'djangorestframework_camel_case.parser.CamelCaseMultiPartParser',
-        'djangorestframework_camel_case.parser.CamelCaseJSONParser',
-    ),
+    # 'DEFAULT_RENDERER_CLASSES': (
+    #     'djangorestframework_camel_case.render.CamelCaseJSONRenderer',
+    #     'djangorestframework_camel_case.render.CamelCaseBrowsableAPIRenderer',
+    # ),
+    # 'DEFAULT_PARSER_CLASSES': (
+    #     # If you use MultiPartFormParser or FormParser, we also have a camel case version
+    #     'djangorestframework_camel_case.parser.CamelCaseFormParser',
+    #     'djangorestframework_camel_case.parser.CamelCaseMultiPartParser',
+    #     'djangorestframework_camel_case.parser.CamelCaseJSONParser',
+    # ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'utils.authentication.BearerAuthentication',
         # 'utils.authentication.SessionAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': (
-        'utils.permissions.IsAdminOrReadOnly',
+        # 'utils.permissions.IsAdminOrReadOnly',
+        'rest_framework.permissions.AllowAny',
     ),
     'DEFAULT_FILTER_BACKENDS': (
         'django_filters.rest_framework.DjangoFilterBackend',

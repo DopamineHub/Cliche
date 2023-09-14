@@ -1,0 +1,366 @@
+[
+  {
+    "model": "cliche_models.ClicheModelFieldType",
+    "pk": "UUID",
+    "fields": {
+      "description": "UUID Field",
+      "attributes": {
+        "primary_key": {
+          "type": "bool",
+          "default": false
+        },
+        "unique": {
+          "type": "bool",
+          "default": false
+        },
+        "blank": {
+          "type": "bool",
+          "default": false
+        },
+        "null": {
+          "type": "bool",
+          "default": false
+        },
+        "db_index": {
+          "type": "bool",
+          "default": false
+        }
+      }
+    }
+  },
+  {
+    "model": "cliche_models.ClicheModelFieldType",
+    "pk": "Char",
+    "fields": {
+      "description": "Char Field",
+      "attributes": {
+        "primary_key": {
+          "type": "bool",
+          "default": false
+        },
+        "unique": {
+          "type": "bool",
+          "default": false
+        },
+        "blank": {
+          "type": "bool",
+          "default": false
+        },
+        "null": {
+          "type": "bool",
+          "default": false
+        },
+        "db_index": {
+          "type": "bool",
+          "default": false
+        },
+        "max_length": {
+          "type": "int",
+          "default": 64
+        }
+      }
+    }
+  },
+  {
+    "model": "cliche_models.ClicheModelFieldType",
+    "pk": "Text",
+    "fields": {
+      "description": "Text Field",
+      "attributes": {
+        "unique": {
+          "type": "bool",
+          "default": false
+        },
+        "blank": {
+          "type": "bool",
+          "default": false
+        },
+        "null": {
+          "type": "bool",
+          "default": false
+        },
+        "db_index": {
+          "type": "bool",
+          "default": false
+        }
+      }
+    }
+  },
+  {
+    "model": "cliche_models.ClicheModelFieldType",
+    "pk": "Integer",
+    "fields": {
+      "description": "Integer Field",
+      "attributes": {
+        "primary_key": {
+          "type": "bool",
+          "default": false
+        },
+        "unique": {
+          "type": "bool",
+          "default": false
+        },
+        "blank": {
+          "type": "bool",
+          "default": false
+        },
+        "null": {
+          "type": "bool",
+          "default": false
+        },
+        "db_index": {
+          "type": "bool",
+          "default": false
+        }
+      }
+    }
+  },
+  {
+    "model": "cliche_models.ClicheModelFieldType",
+    "pk": "SmallInteger",
+    "fields": {
+      "description": "Small Integer Field",
+      "attributes": {
+        "primary_key": {
+          "type": "bool",
+          "default": false
+        },
+        "unique": {
+          "type": "bool",
+          "default": false
+        },
+        "blank": {
+          "type": "bool",
+          "default": false
+        },
+        "null": {
+          "type": "bool",
+          "default": false
+        },
+        "db_index": {
+          "type": "bool",
+          "default": false
+        }
+      }
+    }
+  },
+  {
+    "model": "cliche_models.ClicheModelFieldType",
+    "pk": "BigInteger",
+    "fields": {
+      "description": "Big Integer Field",
+      "attributes": {
+        "primary_key": {
+          "type": "bool",
+          "default": false
+        },
+        "unique": {
+          "type": "bool",
+          "default": false
+        },
+        "blank": {
+          "type": "bool",
+          "default": false
+        },
+        "null": {
+          "type": "bool",
+          "default": false
+        },
+        "db_index": {
+          "type": "bool",
+          "default": false
+        }
+      }
+    }
+  },
+  {
+    "model": "cliche_models.ClicheModelFieldType",
+    "pk": "Float",
+    "fields": {
+      "description": "Float Field",
+      "attributes": {
+        "unique": {
+          "type": "bool",
+          "default": false
+        },
+        "blank": {
+          "type": "bool",
+          "default": false
+        },
+        "null": {
+          "type": "bool",
+          "default": false
+        },
+        "db_index": {
+          "type": "bool",
+          "default": false
+        }
+      }
+    }
+  },
+  {
+    "model": "cliche_models.ClicheModelFieldType",
+    "pk": "Decimal",
+    "fields": {
+      "description": "Decimal Field",
+      "attributes": {
+        "unique": {
+          "type": "bool",
+          "default": false
+        },
+        "blank": {
+          "type": "bool",
+          "default": false
+        },
+        "null": {
+          "type": "bool",
+          "default": false
+        },
+        "db_index": {
+          "type": "bool",
+          "default": false
+        },
+        "max_digits": {
+          "type": "int",
+          "default": 10
+        },
+        "decimal_places": {
+          "type": "int",
+          "default": 5
+        }
+      }
+    }
+  },
+  {
+    "model": "cliche_models.ClicheModelFieldType",
+    "pk": "Boolean",
+    "fields": {
+      "description": "Boolean Field",
+      "attributes": {
+        "unique": {
+          "type": "bool",
+          "default": false
+        },
+        "blank": {
+          "type": "bool",
+          "default": false
+        },
+        "null": {
+          "type": "bool",
+          "default": false
+        },
+        "db_index": {
+          "type": "bool",
+          "default": false
+        }
+      }
+    }
+  },
+  {
+    "model": "cliche_models.ClicheModelFieldType",
+    "pk": "Date",
+    "fields": {
+      "description": "Date Field",
+      "attributes": {
+        "unique": {
+          "type": "bool",
+          "default": false
+        },
+        "blank": {
+          "type": "bool",
+          "default": false
+        },
+        "null": {
+          "type": "bool",
+          "default": false
+        },
+        "db_index": {
+          "type": "bool",
+          "default": false
+        },
+        "auto_now": {
+          "type": "bool",
+          "default": false
+        },
+        "auto_now_add": {
+          "type": "bool",
+          "default": false
+        }
+      }
+    }
+  },
+  {
+    "model": "cliche_models.ClicheModelFieldType",
+    "pk": "Datetime",
+    "fields": {
+      "description": "Datetime Field",
+      "attributes": {
+        "unique": {
+          "type": "bool",
+          "default": false
+        },
+        "blank": {
+          "type": "bool",
+          "default": false
+        },
+        "null": {
+          "type": "bool",
+          "default": false
+        },
+        "db_index": {
+          "type": "bool",
+          "default": false
+        },
+        "auto_now": {
+          "type": "bool",
+          "default": false
+        },
+        "auto_now_add": {
+          "type": "bool",
+          "default": false
+        }
+      }
+    }
+  },
+  {
+    "model": "cliche_models.ClicheModelFieldType",
+    "pk": "ForeignKey",
+    "fields": {
+      "description": "Foreign Key Field",
+      "attributes": {
+        "unique": {
+          "type": "bool",
+          "default": false
+        },
+        "blank": {
+          "type": "bool",
+          "default": false
+        },
+        "null": {
+          "type": "bool",
+          "default": false
+        },
+        "db_index": {
+          "type": "bool",
+          "default": false
+        },
+        "related_name": {
+          "type": "str",
+          "default": null
+        },
+        "related_query_name": {
+          "type": "str",
+          "default": null
+        },
+        "on_delete": {
+          "type": "str",
+          "default": "PROTECTED"
+        },
+        "db_constraint": {
+          "type": "bool",
+          "default": false
+        }
+      }
+    }
+  }
+]

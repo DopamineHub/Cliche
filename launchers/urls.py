@@ -17,10 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
-from rest_framework import (
-    authentication,
-    permissions,
-)
+from rest_framework import authentication, permissions
 
 schema_view = get_schema_view(
     openapi.Info(
@@ -34,9 +31,13 @@ schema_view = get_schema_view(
 )
 
 urlpatterns = [
+    path('api/documents/', schema_view.with_ui('swagger', cache_timeout=0)),
     path('api/admin/', admin.site.urls),
     path('api/drf/', include('rest_framework.urls')),
-    # path('api/', include('apps.characters.urls')),
-    # path('api/', include('apps.abilities.urls')),
-    path('api/documents/', schema_view.with_ui('swagger', cache_timeout=0)),
+    path('api/', include('apps.cliche_apps.urls')),
+    path('api/', include('apps.cliche_builders.urls')),
+    path('api/', include('apps.cliche_models.urls')),
+    path('api/', include('apps.cliche_schemas.urls')),
+    path('api/', include('apps.cliche_scripts.urls')),
+    path('api/', include('apps.cliche_views.urls')),
 ]

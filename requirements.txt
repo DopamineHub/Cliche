@@ -1,4 +1,4 @@
-celery==5.0.5
+# celery==5.0.5
 coreapi==2.3.3
 cryptography==3.4.7
 Django==3.2.3

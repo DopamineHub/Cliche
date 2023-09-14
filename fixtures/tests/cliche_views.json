@@ -1,0 +1,82 @@
+[
+  {
+    "model": "cliche_views.ClicheView",
+    "pk": 100,
+    "fields": {
+      "uuid": "f334d4a8-8ff0-11ee-9140-e8f40871ee62",
+      "app": 100,
+      "name": "TestView1",
+      "description": "Logic of TestView1",
+      "path": "test1/",
+      "created_time": "2021-09-10T03:24:57.625390Z",
+      "modified_time": "2021-09-10T03:24:57.625390Z"
+    }
+  },
+  {
+    "model": "cliche_views.ClicheView",
+    "pk": 101,
+    "fields": {
+      "uuid": "a66290a5-8ff1-11ee-8001-e8f40871ee62",
+      "app": 101,
+      "name": "TestView2",
+      "description": "Logic of TestView2",
+      "path": "test2/",
+      "created_time": "2021-09-10T03:24:57.625390Z",
+      "modified_time": "2021-09-10T03:24:57.625390Z"
+    }
+  },
+  {
+    "model": "cliche_views.ClicheView",
+    "pk": 102,
+    "fields": {
+      "uuid": "af7ab145-8ff1-11ee-9b7f-e8f40871ee62",
+      "app": 101,
+      "name": "TestView3",
+      "description": "Logic of TestView3",
+      "path": "test3/",
+      "created_time": "2021-09-10T03:24:57.625390Z",
+      "modified_time": "2021-09-10T03:24:57.625390Z"
+    }
+  },
+  {
+    "model": "cliche_views.ClicheViewMethod",
+    "pk": 100,
+    "fields": {
+      "uuid": "aa4b0545-9416-11ee-b460-e8f40871ee62",
+      "view": 100,
+      "type": "GET",
+      "description": "GET method of TestView1",
+      "created_time": "2021-09-10T03:24:57.625390Z",
+      "modified_time": "2021-09-10T03:24:57.625390Z"
+    }
+  },
+  {
+    "model": "cliche_views.ClicheViewMethod",
+    "pk": 101,
+    "fields": {
+      "uuid": "df897b01-9416-11ee-a9a5-e8f40871ee62",
+      "view": 101,
+      "type": "GET",
+      "description": "List instance of TestModel2",
+      "model": 101,
+      "output_schema": 101,
+      "created_time": "2021-09-10T03:24:57.625390Z",
+      "modified_time": "2021-09-10T03:24:57.625390Z"
+    }
+  },
+  {
+    "model": "cliche_views.ClicheViewMethod",
+    "pk": 102,
+    "fields": {
+      "uuid": "f03a3546-9416-11ee-b6d5-e8f40871ee62",
+      "view": 102,
+      "type": "POST",
+      "description": "Create instance of TestModel2",
+      "model": 102,
+      "input_schema": 102,
+      "output_schema": 102,
+      "created_time": "2021-09-10T03:24:57.625390Z",
+      "modified_time": "2021-09-10T03:24:57.625390Z"
+    }
+  }
+]
